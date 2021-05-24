@@ -18,9 +18,13 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				'sans': ['Oswald', 'sans-serif'],
+				'workSans': ['Work Sans', 'sans'],
+				'bitter': ['Bitter', 'sans']
 			},
 			colors: {
+				'primary': '#A8879D',
+				'calltoAction': '#f57E9A',
+
 				'coffee-bean': {
 					DEFAULT: '#2C1310',
 					'50': '#FBCCC5',
@@ -40,5 +44,9 @@ module.exports = {
 	variants: {
 		extend: {},
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/typography'),
+		require('@tailwindcss/line-clamp'),
+		require('@tailwindcss/forms'),
+	],
 };
