@@ -18,8 +18,8 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				'workSans': ['Work Sans', 'sans'],
-				'bitter': ['Bitter', 'sans']
+				'title': ['Merriweather', 'sans'],
+				'body': ['Fira Sans', 'sans']
 			},
 			colors: {
 				'primary': '#A8879D',

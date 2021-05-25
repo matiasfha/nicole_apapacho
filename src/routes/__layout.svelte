@@ -6,32 +6,10 @@
 <header class="w-screen bg-white pb-6">
 	<div class="container mx-auto max-w-screen-md flex flex-col items-center justify-center">
 		<img src={logoSrc} alt="Logo de MamaMamifera" class="self-center" width="130" />
-		<h1 class="text-xl md:text-3xl text-coffee-bean-600 font-bold font-workSans pt-4 pb-12 ">
+		<h1 class="text-xl md:text-3xl text-coffee-bean-600 font-bold font-title pt-4 pb-12 ">
 			Maternidad, Lactancia, Crianza y Sexualidad
 		</h1>
 	</div>
-	<nav class="w-screen flex justify-center content-center bg-primary">
-		<a
-			href="/"
-			class=" text-coffee-bean-800 px-4 md:px-12 py-2 rounded-md text-md font-medium transition-colors duration-200 ease-in-out hover:text-calltoAction"
-			>Inicio</a
-		>
-		<a
-			href="/products"
-			class=" text-coffee-bean-800 px-4 md:px-12 py-2 rounded-md text-md font-medium transition-colors duration-200 ease-in-out hover:text-calltoAction"
-			sveltekit:prefetch>Talleres</a
-		>
-		<a
-			href="/blog"
-			class=" text-coffee-bean-800 px-4 md:px-12 py-2 rounded-md text-md font-medium transition-colors duration-200 ease-in-out hover:text-calltoAction"
-			sveltekit:prefetch>Blog</a
-		>
-		<a
-			href="/about"
-			class=" text-coffee-bean-800 px-4 md:px-12 py-2 rounded-md text-md font-medium transition-colors duration-200 ease-in-out hover:text-calltoAction"
-			sveltekit:prefetch>Sobre Mi</a
-		>
-	</nav>
 	<div class="container max-w-screen-md flex content-center justify-center mx-auto py-4">
 		<a href="https://facebook.com" class="text-calltoAction">
 			<svg
@@ -68,6 +46,28 @@
 			>
 		</a>
 	</div>
+	<nav class="w-screen flex justify-center content-center bg-primary">
+		<a
+			href="/"
+			class=" text-coffee-bean-800 px-4 md:px-12 py-2 rounded-md text-md font-medium transition-colors duration-200 ease-in-out hover:text-calltoAction"
+			>Inicio</a
+		>
+		<a
+			href="/products"
+			class=" text-coffee-bean-800 px-4 md:px-12 py-2 rounded-md text-md font-medium transition-colors duration-200 ease-in-out hover:text-calltoAction"
+			sveltekit:prefetch>Talleres</a
+		>
+		<a
+			href="/blog"
+			class=" text-coffee-bean-800 px-4 md:px-12 py-2 rounded-md text-md font-medium transition-colors duration-200 ease-in-out hover:text-calltoAction"
+			sveltekit:prefetch>Blog</a
+		>
+		<a
+			href="/about"
+			class=" text-coffee-bean-800 px-4 md:px-12 py-2 rounded-md text-md font-medium transition-colors duration-200 ease-in-out hover:text-calltoAction"
+			sveltekit:prefetch>Sobre Mi</a
+		>
+	</nav>
 </header>
 <main class="w-screen h-auto bg-primary pb-24">
 	<div class="container max-w-screen-sm md:max-w-screen-lg px-8 md:px-0 md:mx-auto">
@@ -75,7 +75,7 @@
 	</div>
 </main>
 <footer class="w-screen bg-white pt-6">
-	<h2 class="font-workSans text-2xl text-center font-bold py-6">Contacto</h2>
+	<h2 class="font-title text-2xl text-center font-bold py-6">Contacto</h2>
 	<form class="md:max-w-screen-md mx-8 md:mx-auto pb-12">
 		<div class="flex flex-wrap -mx-3 mb-6">
 			<div class="w-full px-3">

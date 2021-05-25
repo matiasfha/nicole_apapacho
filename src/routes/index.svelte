@@ -71,12 +71,12 @@
 	>
 		<div class="h-96 w-2/5 pt-14 flex flex-col items-start justify-center relative">
 			<h1
-				class="uppercase font-workSans font-bold text-calltoAction text-5xl w-full leading-relaxed px-16 py-6 z-10"
+				class="uppercase font-title font-bold text-calltoAction text-5xl w-full leading-relaxed px-16 py-6 z-10"
 			>
 				Nicole Apapacho
 			</h1>
 			<div class="w-full px-16 pb-16 z-10">
-				<ul class="text-coffee-bean-900 text-lg font-bitter">
+				<ul class="text-coffee-bean-900 text-lg font-body">
 					<li>Maternindad y Lactancia</li>
 					<li>
 						Consejera de lactancia de LCDLL Te acompaño durante tugestación,puerperio y crianza
@@ -94,7 +94,7 @@
 
 <section class="">
 	<div class="pb-16 px-4">
-		<h1 class="text-4xl text-coffee-bean-600 text-center font-bold py-7 font-workSans">Talleres</h1>
+		<h1 class="text-4xl text-coffee-bean-600 text-center font-bold py-7 font-title">Talleres</h1>
 
 		<!-- CARD-->
 		<div class="grid grid-col-1 md:grid-flow-col gap-4 pb-24">
@@ -103,9 +103,7 @@
 			{/each}
 		</div>
 
-		<h1 class="text-4xl text-coffee-bean-600 text-center font-bold py-7 font-workSans">
-			Artículos
-		</h1>
+		<h1 class="text-4xl text-coffee-bean-600 text-center font-bold py-7 font-title">Artículos</h1>
 		<!-- Card-->
 		{#each posts as post}
 			<PostCard {post} />

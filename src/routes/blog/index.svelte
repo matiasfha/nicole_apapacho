@@ -41,7 +41,7 @@
 
 <svelte:head><title>Nicole Apapacho - Blog</title></svelte:head>
 
-<h1 class="text-4xl text-coffee-bean-600 text-center font-bold py-7 font-workSans">Artículos</h1>
+<h1 class="text-4xl text-coffee-bean-600 text-center font-bold py-7 font-title">Artículos</h1>
 {#each posts as post}
 	<PostCard {post} />
 {/each}

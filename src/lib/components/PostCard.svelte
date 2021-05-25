@@ -8,10 +8,10 @@
 </script>
 
 <article
-	class="max-full px-10 my-4 py-6 bg-white rounded-lg shadow-md transform transition-transform duration-200 ease-in-out hover:scale-105"
+	class="max-full px-4 my-2 py-2 bg-white rounded-lg shadow-md transform transition-transform duration-200 ease-in-out hover:scale-105"
 >
 	<div class="flex justify-between items-center">
-		<span class="font-light text-coffee-bean-400">{post.data.date}</span>
+		<span class="font-light text-coffee-bean-500 text-xs">{post.data.date}</span>
 		<a
 			class="px-2 py-1 bg-calltoAction text-gray-100 font-bold rounded hover:bg-coffee-bean-100"
 			href={tagUrl}>{tag}</a
@@ -24,7 +24,7 @@
 			sveltekit:prefetch>{PrismicDOM.RichText.asText(post.data.title)}</a
 		>
 		<a href={url} sveltekit:prefetch>
-			<div class="mt-2 text-coffee-bean-600 line-clamp-3 pb-8 prose font-bitter">
+			<div class="mt-2 text-coffee-bean-600 line-clamp-3 pb-8 prose font-body">
 				{@html PrismicDOM.RichText.asHtml(post.data.text)}
 			</div>
 		</a>
