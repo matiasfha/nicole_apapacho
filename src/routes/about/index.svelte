@@ -23,6 +23,11 @@
 <script>
 	export let text;
 	import PrismicDOM from 'prismic-dom';
+
+	// configuration
+	export const router = false;
+	export const hydrate = false;
+	export const prerender = true;
 </script>
 
 <svelte:head><title>Nicole Apapacho - Sobre Mí</title></svelte:head>
