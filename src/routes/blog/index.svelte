@@ -37,11 +37,16 @@
 <script>
 	import PostCard from '$lib/components/PostCard.svelte';
 	export let posts;
+	// configuration
+	export const router = false;
+	export const hydrate = false;
+	export const prerender = true;
 </script>
 
 <svelte:head><title>Nicole Apapacho - Blog</title></svelte:head>
 
-<h1 class="text-4xl text-coffee-bean-600 text-center font-bold py-7 font-title">Artículos</h1>
-{#each posts as post}
-	<PostCard {post} />
-{/each}
+<div class="pt-12">
+	{#each posts as post}
+		<PostCard {post} />
+	{/each}
+</div>

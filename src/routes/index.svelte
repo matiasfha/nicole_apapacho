@@ -63,6 +63,10 @@
 	import PostCard from '$lib/components/PostCard.svelte';
 	export let posts;
 	export let products;
+	// configuration
+	export const router = false;
+	export const hydrate = false;
+	export const prerender = true;
 </script>
 
 <svelte:head><title>Nicole Apapacho</title></svelte:head>
@@ -93,11 +97,9 @@
 	</section> -->
 
 <section class="">
-	<div class="pb-16 px-4">
-		<h1 class="text-4xl text-coffee-bean-600 text-center font-bold py-7 font-title">Talleres</h1>
-
+	<div class="pb-16">
 		<!-- CARD-->
-		<div class="grid grid-col-1 md:grid-flow-col gap-4 pb-24">
+		<div class="grid grid-col-1 md:grid-flow-col gap-4 pb-24 pt-12">
 			{#each products as product}
 				<ProductCard {product} />
 			{/each}

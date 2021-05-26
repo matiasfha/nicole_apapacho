@@ -46,7 +46,7 @@
 			>
 		</a>
 	</div>
-	<nav class="w-screen flex justify-center content-center bg-primary">
+	<nav class="w-screen flex justify-center content-center bg-primary bg-opacity-70">
 		<a
 			href="/"
 			class=" text-coffee-bean-800 px-4 md:px-12 py-2 rounded-md text-md font-medium transition-colors duration-200 ease-in-out hover:text-calltoAction"
@@ -69,7 +69,7 @@
 		>
 	</nav>
 </header>
-<main class="w-screen h-auto bg-primary pb-24">
+<main class="w-screen h-auto bg-primary bg-opacity-70 pb-24">
 	<div class="container max-w-screen-sm md:max-w-screen-lg px-8 md:px-0 md:mx-auto">
 		<slot />
 	</div>
