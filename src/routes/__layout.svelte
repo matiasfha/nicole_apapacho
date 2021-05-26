@@ -6,7 +6,9 @@
 <header class="w-screen bg-white pb-6">
 	<div class="container mx-auto max-w-screen-md flex flex-col items-center justify-center">
 		<img src={logoSrc} alt="Logo de MamaMamifera" class="self-center" width="130" />
-		<h1 class="text-xl md:text-3xl text-coffee-bean-600 font-bold font-title pt-4 pb-12 ">
+		<h1
+			class="text-xl md:text-3xl text-coffee-bean-600 font-bold font-title pt-4 pb-12 text-center"
+		>
 			Maternidad, Lactancia, Crianza y Sexualidad
 		</h1>
 	</div>
