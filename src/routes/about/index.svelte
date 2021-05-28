@@ -34,8 +34,8 @@
 
 <div class="container max-w-screen-sm mx-auto">
 	<h1 class="text-4xl text-coffee-bean-600 text-center font-bold py-7 font-title">Sobre Mí</h1>
-	<div class="prose flex flex-col justify-center content-center">
-		<div class="font-body text-coffee-bean-700">
+	<div class="prose text-base flex flex-col justify-center content-center">
+		<div class="font-body text-coffee-bean-600">
 			{@html PrismicDOM.RichText.asHtml(text?.[0].data.about)}
 		</div>
 	</div>

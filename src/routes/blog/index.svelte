@@ -1,6 +1,6 @@
 <script context="module">
 	async function loadPosts(fetch) {
-		const url = `/api/posts.json`;
+		const url = `/api/blog/posts.json`;
 		const res = await fetch(url);
 		const json = await res.json();
 

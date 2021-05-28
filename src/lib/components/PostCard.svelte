@@ -1,7 +1,7 @@
 <script>
 	import PrismicDOM from 'prismic-dom';
 	export let post;
-	export const url = `/blog/post/${post?.id}`;
+	export const url = `/blog/${post?.id}`;
 	export const tagUrl = `/blog/tag/${post?.data.tag.slug}`;
 	const { slug = '' } = post?.data.tag;
 	export const tag = slug.charAt(0).toUpperCase() + slug.slice(1);

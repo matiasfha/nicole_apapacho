@@ -1,6 +1,6 @@
 <script context="module">
-	async function loadProducts(fetch) {
-		const url = `/api/products/products.json`;
+	export async function load({ fetch, page }) {
+		const url = `/api/products/${page.params.id}.json`;
 		const res = await fetch(url);
 		const json = await res.json();
 
@@ -8,7 +8,7 @@
 			return {
 				status: res.status,
 				props: {
-					products: json.products.results
+					product: json.product.results[0]
 				}
 			};
 		}
@@ -18,36 +18,23 @@
 			error: new Error(`Could not load ${url}, status: ${res.status}`)
 		};
 	}
-	export async function load({ page, fetch, session, context }) {
-		const response = await loadProducts(fetch);
-		if (response.status === 200) {
-			return {
-				props: {
-					...response.props
-				}
-			};
-		}
-
-		return {
-			...response
-		};
-	}
 </script>
 
 <script>
 	import ProductCard from '$lib/components/ProductCard.svelte';
-	export let products;
+	import PrismicDOM from 'prismic-dom';
 
+	export let product;
+	console.log(product);
 	// configuration
 	export const router = false;
 	export const hydrate = false;
 	export const prerender = true;
 </script>
 
-<svelte:head><title>Nicole Apapacho - Talleres</title></svelte:head>
-
+<svelte:head
+	><title>Nicole Apapacho - {PrismicDOM.RichText.asText(product.data.title)}</title></svelte:head
+>
 <div class="grid grid-col-1 md:grid-flow-col gap-4 pb-24 pt-12">
-	{#each products as product}
-		<ProductCard {product} />
-	{/each}
+	<ProductCard {product} />
 </div>

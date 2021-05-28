@@ -5,14 +5,12 @@
 
 <header class="w-screen bg-white pb-6">
 	<div class="container mx-auto max-w-screen-md flex flex-col items-center justify-center">
-		<img src={logoSrc} alt="Logo de MamaMamifera" class="self-center" width="130" />
-		<h1
-			class="text-xl md:text-3xl text-coffee-bean-600 font-bold font-title pt-4 pb-12 text-center"
-		>
+		<img src={logoSrc} alt="Logo de MamaMamifera" class="self-center" width="120" />
+		<h1 class="text-xl md:text-3xl text-coffee-bean-600 font-bold font-title pt-6 pb-4 text-center">
 			Maternidad, Lactancia, Crianza y Sexualidad
 		</h1>
 	</div>
-	<div class="container max-w-screen-md flex content-center justify-center mx-auto py-4">
+	<div class="container max-w-screen-md flex content-center justify-center mx-auto pb-8">
 		<a href="https://facebook.com" class="text-calltoAction">
 			<svg
 				class="fill-current"
@@ -48,7 +46,7 @@
 			>
 		</a>
 	</div>
-	<nav class="w-screen flex justify-center content-center bg-primary bg-opacity-70">
+	<nav class="w-screen flex justify-center content-center bg-gradient-to-r from-test to-primary">
 		<a
 			href="/"
 			class=" text-coffee-bean-800 px-4 md:px-12 py-2 rounded-md text-md font-medium transition-colors duration-200 ease-in-out hover:text-calltoAction"
@@ -71,7 +69,7 @@
 		>
 	</nav>
 </header>
-<main class="w-screen h-auto bg-primary bg-opacity-70 pb-24">
+<main class="w-screen h-auto  bg-test pb-24 bg-gradient-to-r from-test to-primary">
 	<div class="container max-w-screen-sm md:max-w-screen-lg px-8 md:px-0 md:mx-auto">
 		<slot />
 	</div>

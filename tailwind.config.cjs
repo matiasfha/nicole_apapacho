@@ -24,7 +24,7 @@ module.exports = {
 			colors: {
 				'primary': '#A8879D',
 				'calltoAction': '#f57E9A',
-
+				'test': '#f8edeb',
 				'coffee-bean': {
 					DEFAULT: '#2C1310',
 					'50': '#FBCCC5',
