@@ -10,7 +10,9 @@
 			Maternidad, Lactancia, Crianza y Sexualidad
 		</h1>
 	</div>
-	<div class="container max-w-screen-md flex content-center justify-center mx-auto pb-8">
+	<div
+		class="hidden md:block container max-w-screen-md flex content-center justify-center mx-auto pb-8"
+	>
 		<a href="https://facebook.com" class="text-calltoAction">
 			<svg
 				class="fill-current"

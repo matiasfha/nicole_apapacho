@@ -16,7 +16,7 @@
 		</a>
 
 		<header class="flex items-center justify-between leading-tight px-2 md:px-4 pt-8">
-			<h3 class="font-title font-bold text-3xl md:text-xl">
+			<h3 class="font-title font-bold text-xl md:text-2xl">
 				<a
 					class="no-underline hover:underline text-coffee-bean-700 font-title"
 					href={`/products/${product.id}`}

@@ -21,11 +21,9 @@
 </script>
 
 <script>
-	import PostCard from '$lib/components/PostCard.svelte';
 	import PrismicDOM from 'prismic-dom';
 
 	export let post;
-	console.log(post);
 	// configuration
 	export const router = false;
 	export const hydrate = false;
@@ -35,6 +33,18 @@
 <svelte:head
 	><title>Nicole Apapacho - {PrismicDOM.RichText.asText(post.data.title)}</title></svelte:head
 >
-<div class="grid grid-col-1 md:grid-flow-col gap-4 pb-24 pt-12">
-	<PostCard {post} />
+<div class="grid grid-col-1 pb-24 md:pt-12">
+	<div class="w-full pt-4 md:pb-12">
+		<img
+			src={post.data.image.url}
+			alt={post.data.image.alt}
+			class="rouded-lg object-contain w-full h-60 md:h-80"
+		/>
+	</div>
+	<h1 class="font-title font-bold text-3xl md:text-4xl text-center text-coffee-bean-500">
+		{PrismicDOM.RichText.asText(post.data.title)}
+	</h1>
+	<div class="prose font-body text-coffee-bean-500 mt-4 pb-8 text-center mx-auto">
+		{@html PrismicDOM.RichText.asHtml(post.data.text)}
+	</div>
 </div>
