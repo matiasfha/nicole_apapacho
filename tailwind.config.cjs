@@ -18,13 +18,25 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				'title': ['Merriweather', 'sans'],
-				'body': ['Fira Sans', 'sans']
+				'title': ['Montserrat', 'sans'],
+				'body': ['Chivo', 'sans']
 			},
 			colors: {
 				'primary': '#A8879D',
 				'calltoAction': '#f57E9A',
-				'test': '#f8edeb',
+				'bouquet': {
+					DEFAULT: '#A8879D',
+					'50': '#FFFFFF',
+					'100': '#f8edeb',
+					'200': '#E8E0E5',
+					'300': '#D3C2CD',
+					'400': '#BDA5B5',
+					'500': '#A8879D',
+					'600': '#926A85',
+					'700': '#75546A',
+					'800': '#573F4F',
+					'900': '#392A34'
+				},
 				'coffee-bean': {
 					DEFAULT: '#2C1310',
 					'50': '#FBCCC5',

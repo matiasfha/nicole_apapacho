@@ -61,8 +61,13 @@
 <script>
 	import ProductCard from '$lib/components/ProductCard.svelte';
 	import PostCard from '$lib/components/PostCard.svelte';
+	import Testimonials from '$lib/components/Testimonials.svelte';
+	import nicoleSrc from '$lib/images/yo.png';
 	export let posts;
 	export let products;
+	export const scrollToElementId = (elementId) => {
+		document.getElementById(elementId).scrollIntoView({ behavior: 'smooth' });
+	};
 	// configuration
 	export const router = false;
 	export const hydrate = false;
@@ -70,43 +75,108 @@
 </script>
 
 <svelte:head><title>Nicole Apapacho</title></svelte:head>
-<!-- <section
-		class="bg-coffee-bean w-full h-auto hero bg-fixed bg-cover bg-center mx-auto flex items-center justify-end py-24 pr-32"
-	>
-		<div class="h-96 w-2/5 pt-14 flex flex-col items-start justify-center relative">
-			<h1
-				class="uppercase font-title font-bold text-calltoAction text-5xl w-full leading-relaxed px-16 py-6 z-10"
-			>
-				Nicole Apapacho
-			</h1>
-			<div class="w-full px-16 pb-16 z-10">
-				<ul class="text-coffee-bean-900 text-lg font-body">
-					<li>Maternindad y Lactancia</li>
-					<li>
-						Consejera de lactancia de LCDLL Te acompaño durante tugestación,puerperio y crianza
-						respetuosa .
-					</li>
-					<li>🌿 Talleres</li>
-					<li>🌿 Consejerías Lactancia Materna</li>
-					<li>🌿 Crianza Respetuosa</li>
-					<li>🌿 Sexualidad</li>
-				</ul>
-			</div>
-			<div class="bg-white opacity-40 w-full h-full absolute z-0" />
-		</div>
-	</section> -->
 
-<section class="">
-	<div class="pb-16">
+<section class="relative w-screen bg-white pb-32">
+	<div class="container max-w-screen-xl mx-auto">
+		<div
+			class="text-center lg:text-left px-4 md:px-0 col-span-3 md:col-span-1 pb-12 md:pb-0 max-w-screen-md"
+		>
+			<h1
+				class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl text-title"
+			>
+				<span class="block xl:inline">Data to enrich your</span>
+				<span class="block text-calltoAction xl:inline">online business</span>
+			</h1>
+			<p
+				class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 text-body"
+			>
+				Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
+				Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+			</p>
+			<div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+				<div class="rounded-md shadow">
+					<a
+						href="#"
+						class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-calltoAction hover:bg-coffee-bean-100 md:py-4 md:text-lg md:px-10"
+					>
+						Agenda Aquí
+					</a>
+				</div>
+				<div class="mt-3 sm:mt-0 sm:ml-3">
+					<div
+						role="link"
+						on:click={() => scrollToElementId('talleres')}
+						class="w-full cursor-pointer flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-coffee-bean-300 md:py-4 md:text-lg md:px-10"
+					>
+						Ver los talleres
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hidden md:block absolute inset-y-44 right-44 -top-32 ">
+			<img class="object-cover hero-img" src={nicoleSrc} alt="" />
+		</div>
+	</div>
+</section>
+
+<section
+	class="container pt-24 lg:pt-24 pb-24 lg:pb-40 z-20 relative mx-auto px-4 md:px-0"
+	id="talleres"
+>
+	<div class="text-center w-full md:w-2/3 xl:w-1/2 mx-auto">
+		<h4 class="font-body font-medium text-primary text-base md:text-xl uppercase text-title">
+			Descube como te puedo ayudar
+		</h4>
+		<h2
+			class="font-body font-bold text-title text-3xl sm:text-4xl lg:text-5xl tracking-wider leading-tight text-coffee-bean-400"
+		>
+			Talleres y asesorías
+		</h2>
+		<div class="h-1 mt-4 md:mt-6 w-2/5 mx-auto border-solid border-primary border-t-2" />
+	</div>
+	<div class="pt-16">
 		<!-- CARD-->
-		<div class="grid grid-col-1 md:grid-flow-col gap-4 pb-24 pt-12">
+		<div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 			{#each products as product}
 				<ProductCard {product} />
 			{/each}
 		</div>
+	</div>
+</section>
 
-		<h1 class="text-4xl text-coffee-bean-600 text-center font-bold py-7 font-title">Artículos</h1>
-		<!-- Card-->
+<section class="container  pb-24 lg:pb-40 z-20 relative mx-auto">
+	<div class="text-center w-full md:w-2/3 xl:w-1/2 mx-auto">
+		<h4 class="font-body font-medium text-primary text-base md:text-xl uppercase text-tle">
+			Que dicen las personas
+		</h4>
+		<h2
+			class="font-body font-bold text-title text-3xl sm:text-4xl lg:text-5xl tracking-wider leading-tight text-coffee-bean-400"
+		>
+			Quienes han participado comentan
+		</h2>
+		<div class="h-1 mt-4 md:mt-6 w-2/5 mx-auto border-solid border-primary border-t-2" />
+	</div>
+	<div class="pt-16">
+		<!-- CARD-->
+		<Testimonials />
+	</div>
+</section>
+
+<section class="container pb-24 lg:pb-40 z-20 relative mx-auto px-4 md:px-0">
+	<div class="text-center w-full md:w-2/3 xl:w-1/2 mx-auto">
+		<h4 class="font-body font-medium text-primary text-base md:text-xl uppercase text-tle">
+			Mira mís últimos artículos
+		</h4>
+		<h2
+			class="font-body font-bold text-title text-3xl sm:text-4xl lg:text-5xl tracking-wider leading-tight text-coffee-bean-400"
+		>
+			También tengo un blog!
+		</h2>
+		<div class="h-1 mt-4 md:mt-6 w-2/5 mx-auto border-solid border-primary border-t-2" />
+	</div>
+	<div class="pt-24 grid grid-cols-1 lg:grid-cols-3 gap-8 justify-center ">
+		<!-- CARD-->
 		{#each posts as post}
 			<PostCard {post} />
 		{/each}
@@ -114,7 +184,10 @@
 </section>
 
 <style>
-	.hero {
-		background-image: url('https://static.wixstatic.com/media/e8d6781ca10e45ce9ab0dc83c3111387.jpeg/v1/fill/w_1665,h_740,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01/e8d6781ca10e45ce9ab0dc83c3111387.jpeg');
+	.hero-img {
+		height: 40rem;
+	}
+	:root {
+		scroll-behavior: smooth;
 	}
 </style>

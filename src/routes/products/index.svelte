@@ -37,17 +37,30 @@
 <script>
 	import ProductCard from '$lib/components/ProductCard.svelte';
 	export let products;
-
-	// configuration
-	export const router = false;
-	export const hydrate = false;
-	export const prerender = true;
 </script>
 
 <svelte:head><title>Nicole Apapacho - Talleres</title></svelte:head>
 
-<div class="grid grid-col-1 md:grid-flow-col gap-4 pb-24 pt-12">
-	{#each products as product}
-		<ProductCard {product} />
-	{/each}
-</div>
+<header class="relative w-screen bg-white pb-24 h-96 pt-12">
+	<div class="text-center w-full md:w-2/3 xl:w-1/2 mx-auto">
+		<h4 class="font-body font-medium text-primary text-base md:text-xl uppercase text-tle">
+			Descube como te puedo ayudar
+		</h4>
+		<h2
+			class="font-body font-bold text-title text-3xl sm:text-4xl lg:text-5xl tracking-wider leading-tight text-coffee-bean-400"
+		>
+			Talleres y asesorías
+		</h2>
+		<div class="h-1 mt-4 md:mt-6 w-2/5 mx-auto border-solid border-primary border-t-2" />
+	</div>
+</header>
+<section class="container pt-24 lg:pt-24 pb-24 lg:pb-40 z-20 relative mx-auto px-4 md:px-0">
+	<div class="pt-16">
+		<!-- CARD-->
+		<div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			{#each products as product}
+				<ProductCard {product} />
+			{/each}
+		</div>
+	</div>
+</section>

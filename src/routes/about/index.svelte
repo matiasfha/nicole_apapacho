@@ -23,20 +23,31 @@
 <script>
 	export let text;
 	import PrismicDOM from 'prismic-dom';
-
-	// configuration
-	export const router = false;
-	export const hydrate = false;
-	export const prerender = true;
+	import nicoleSrc from '$lib/images/yo.png';
 </script>
 
 <svelte:head><title>Nicole Apapacho - Sobre Mí</title></svelte:head>
 
-<div class="container max-w-screen-sm mx-auto">
-	<h1 class="text-4xl text-coffee-bean-600 text-center font-bold py-7 font-title">Sobre Mí</h1>
-	<div class="prose text-base flex flex-col justify-center content-center">
-		<div class="font-body text-coffee-bean-600">
-			{@html PrismicDOM.RichText.asHtml(text?.[0].data.about)}
+<header class="relative w-screen bg-white pb-24 h-96 pt-12">
+	<div class="text-center w-full md:w-2/3 xl:w-1/2 mx-auto">
+		<h4 class="font-body font-medium text-primary text-base md:text-xl uppercase text-tle">
+			Algo de historia
+		</h4>
+		<h2
+			class="font-body font-bold text-title text-3xl sm:text-4xl lg:text-5xl tracking-wider leading-tight text-coffee-bean-400"
+		>
+			Sobre mí
+		</h2>
+		<div class="h-1 mt-4 md:mt-6 w-2/5 mx-auto border-solid border-primary border-t-2" />
+	</div>
+</header>
+<div class="container max-w-screen-md mx-auto pt-12">
+	<div class="bg-bouquet-50 p-12 shadow-lg rounded-md">
+		<h1 class="text-4xl text-coffee-bean-600 text-center font-bold py-7 font-title">Sobre Mí</h1>
+		<div class="prose text-base flex flex-col justify-center content-center mx-auto">
+			<div class="font-body text-coffee-bean-600">
+				{@html PrismicDOM.RichText.asHtml(text?.[0].data.about)}
+			</div>
 		</div>
 	</div>
 </div>
