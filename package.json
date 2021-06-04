@@ -38,6 +38,8 @@
 		"@tailwindcss/forms": "0.3.2",
 		"@tailwindcss/line-clamp": "0.2.0",
 		"@tailwindcss/typography": "0.4.0",
-		"prismic-dom": "2.2.5"
+		"prismic-dom": "2.2.5",
+		"rrule": "2.6.8",
+		"svelte-calendar": "2.0.4"
 	}
 }

@@ -76,7 +76,7 @@
 
 <svelte:head><title>Nicole Apapacho</title></svelte:head>
 
-<section class="relative w-screen bg-white pb-32">
+<section class="relative w-screen bg-white h-96 flex items-center justify-center">
 	<div class="container max-w-screen-xl mx-auto">
 		<div
 			class="text-center lg:text-left px-4 md:px-0 col-span-3 md:col-span-1 pb-12 md:pb-0 max-w-screen-md"
@@ -185,7 +185,7 @@
 
 <style>
 	.hero-img {
-		height: 40rem;
+		height: 35.5rem;
 	}
 	:root {
 		scroll-behavior: smooth;

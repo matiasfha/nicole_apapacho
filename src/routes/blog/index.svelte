@@ -41,7 +41,7 @@
 
 <svelte:head><title>Nicole Apapacho - Blog</title></svelte:head>
 
-<header class="relative w-screen bg-white pb-24 h-96 pt-12">
+<header class="relative w-screen bg-white h-96 flex items-center justify-center">
 	<div class="text-center w-full md:w-2/3 xl:w-1/2 mx-auto">
 		<h4 class="font-body font-medium text-primary text-base md:text-xl uppercase text-tle">
 			Mira mís últimos artículos

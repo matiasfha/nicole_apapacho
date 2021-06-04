@@ -139,8 +139,8 @@
 	<slot />
 </main>
 <footer class="w-screen bg-white pt-6">
-	<h2 class="font-title text-2xl text-center font-bold py-6">Contacto</h2>
-	<form class="md:max-w-screen-xl mx-8 md:mx-auto pb-12">
+	<h2 class="font-title text-2xl text-center font-bold py-6 hidden">Contacto</h2>
+	<form class="md:max-w-screen-xl mx-8 md:mx-auto pb-12 hidden">
 		<div class="flex flex-wrap -mx-3 mb-6">
 			<div class="w-full px-3">
 				<label

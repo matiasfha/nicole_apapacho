@@ -1,5 +1,6 @@
 <script>
 	import PrismicDOM from 'prismic-dom';
+	import { dataset_dev } from 'svelte/internal';
 	export let product;
 </script>
 
@@ -31,7 +32,7 @@
 			<span class="flex items-center">
 				<div class="rounded-md shadow">
 					<a
-						href="#"
+						href={`/products/${product.uid}`}
 						class="w-full flex items-center justify-center px-4 py-1 border border-transparent text-base font-medium rounded-md text-white bg-calltoAction hover:bg-coffee-bean-100+"
 					>
 						Saber Más

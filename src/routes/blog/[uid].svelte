@@ -1,6 +1,6 @@
 <script context="module">
 	export async function load({ fetch, page }) {
-		const url = `/api/blog/${page.params.id}.json`;
+		const url = `/api/blog/${page.params.uid}.json`;
 		const res = await fetch(url);
 		const json = await res.json();
 
@@ -8,7 +8,7 @@
 			return {
 				status: res.status,
 				props: {
-					post: json.post.results[0]
+					post: json.post
 				}
 			};
 		}
@@ -33,12 +33,12 @@
 <svelte:head
 	><title>Nicole Apapacho - {PrismicDOM.RichText.asText(post.data.title)}</title></svelte:head
 >
-<section class="relative w-screen bg-white pb-24">
+<header class="relative w-screen bg-white h-96 flex items-center justify-center flex-col">
 	<img class="mx-auto object-contain h-72" src={post.data.image.url} alt="" />
 	<h1 class="font-title font-bold text-3xl md:text-4xl text-center text-coffee-bean-500">
 		{PrismicDOM.RichText.asText(post.data.title)}
 	</h1>
-</section>
+</header>
 <div class="container max-w-screen-md mx-auto pt-12">
 	<div class=" bg-bouquet-50 p-12 shadow-md rounded-md">
 		<div class="prose font-body text-coffee-bean-500 mt-4 pb-8 text-center mx-auto">

@@ -1,7 +1,6 @@
 <script>
 	import PrismicDOM from 'prismic-dom';
 	export let post;
-	console.log(post);
 	export const url = `/blog/${post?.id}`;
 	export const tagUrl = `/blog/tag/${post?.data.tag.slug}`;
 	const { slug = '' } = post?.data.tag;
@@ -14,13 +13,13 @@
 		style={`background-image: url(${post.data.image.url});`}
 		draggable="true"
 		data-href="/post"
-		href="/post"
+		href={`/blog/${post.uid}`}
 	/>
 	<a
 		class="font-body font-bold text-coffee-bean-500 hover:text-coffee-bean-300 transition duration-300 text-2xl tracking-wide block pt-6"
 		draggable="true"
 		data-href="/post"
-		href="/post">{PrismicDOM.RichText.asText(post.data.title)}</a
+		href={`/blog/${post.uid}`}>{PrismicDOM.RichText.asText(post.data.title)}</a
 	>
 	<p class="font-body text-coffee-bean-600 text-sm pt-3 lg:pt-5 overflow-ellipsis overflow-hidden">
 		{@html PrismicDOM.RichText.asHtml(post.data.text)}
@@ -29,7 +28,7 @@
 		class="inline-block mt-6 px-8 py-4 bg-white font-body text-coffee-brean-300 hover:text-calltoAction text-sm rounded-full shadow hover:shadow-md border border-primary hover:border-bouquet-500 transition duration-300"
 		draggable="true"
 		data-href="/post"
-		href="/post"
+		href={`/blog/${post.uid}`}
 	>
 		Leer más
 	</a>
