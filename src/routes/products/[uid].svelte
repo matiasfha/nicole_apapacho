@@ -3,7 +3,6 @@
 		const url = `/api/products/${page.params.uid}.json`;
 		const res = await fetch(url);
 		const json = await res.json();
-		console.log(json);
 		if (res.ok) {
 			return {
 				status: res.status,
@@ -21,15 +20,99 @@
 </script>
 
 <script>
+	import { createMachine, interpret, assign } from 'xstate';
 	import PrismicDOM from 'prismic-dom';
+	import { browser } from '$app/env';
+	import { goto } from '$app/navigation';
+	// Props
+
+	if (browser) {
+		function isCalendlyEvent(e) {
+			return e.data.event && e.data.event.indexOf('calendly') === 0;
+		}
+		window?.addEventListener('message', (e) => {
+			if (isCalendlyEvent(e)) {
+				if (e.data.event === 'calendly.event_scheduled') {
+					paymentService.send('SCHEDULED');
+				}
+			}
+		});
+	}
 
 	export let product;
+
+	const performPayment = () => {
+		return new Promise((resolve) => {
+			setTimeout(() => {
+				resolve('Paid');
+			}, 3000);
+		});
+	};
+	const paymentMachine = createMachine(
+		{
+			id: 'payment',
+			initial: 'iddle',
+			states: {
+				iddle: {
+					on: {
+						PAY: {
+							target: 'paying'
+						}
+					}
+				},
+				paying: {
+					invoke: {
+						src: performPayment,
+						onDone: {
+							target: 'paid'
+						}
+					}
+				},
+				paid: {
+					entry: ['calendly'],
+					on: {
+						SCHEDULED: {
+							target: 'scheduled'
+						}
+					}
+				},
+				scheduled: {
+					type: 'final',
+					entry: 'navigate'
+				}
+			}
+		},
+		{
+			actions: {
+				navigate: () => {
+					goto('/thanks');
+				},
+				calendly: () => {
+					Calendly?.initPopupWidget({
+						url: import.meta.env.VITE_CALENDLY_URL,
+						prefill: {
+							customAnswers: {
+								taller: product.data.title
+							}
+						}
+					});
+				}
+			}
+		}
+	);
+	export let currentState;
+	const paymentService = interpret(paymentMachine)
+		.onTransition((state) => {
+			console.log(state);
+			currentState = state;
+		})
+		.start();
 </script>
 
-<svelte:head
-	><title>Nicole Apapacho - {PrismicDOM.RichText.asText(product.data.title)}</title></svelte:head
->
-<header class="relative w-screen bg-white h-96 flex items-center justify-center">
+<svelte:head>
+	<title>Nicole Apapacho - {PrismicDOM.RichText.asText(product.data.title)}</title>
+</svelte:head>
+<header class="relative w-screen bg-white h-48 flex items-center justify-center">
 	<div class="text-center w-full md:w-2/3 xl:w-1/2 mx-auto">
 		<h4 class="font-body font-medium text-primary text-base md:text-xl uppercase text-tle">
 			Agenda tu taller
@@ -42,8 +125,10 @@
 		<div class="h-1 mt-4 md:mt-6 w-2/5 mx-auto border-solid border-primary border-t-2" />
 	</div>
 </header>
-<div class="container max-w-screen-lg mx-auto py-12">
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-bouquet-50 p-4 rounded-md shadow-lg pb-12">
+<div class="container max-w-screen-lg mx-auto py-12 px-2 md:px-0">
+	<div
+		class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8 bg-bouquet-50 p-4 rounded-md shadow-lg pb-4 md:pb-12"
+	>
 		<div>
 			<div class="prose text-coffee-bean-500 font-body pt-12">
 				{@html PrismicDOM.RichText.asHtml(product.data.description)}
@@ -63,28 +148,19 @@
 						Valor: ${product.data.price}
 					</span>
 				</div>
-				<div class="flex flex-col py-8">
-					<span>Selecciona tu fecha</span>
-					<select>
-						<option>Día</option>
-						<option value="lunes">Lunes</option>
-						<option value="miercoles">Miércoles</option>
-						<option value="viernes">Viernes</option>
-					</select>
-					<span>Selecciona tu fecha</span>
-					<select>
-						<option>Día</option>
-						<option value="lunes">Lunes</option>
-						<option value="miercoles">Miércoles</option>
-						<option value="viernes">Viernes</option>
-					</select>
-				</div>
-				<a
-					href={`/product/${product.id}`}
-					class="py-2 text-white font-body bg-calltoAction text-center font-bold hover:bg-opacity-80"
-					>Comprar</a
+
+				<button
+					on:click={() => paymentService.send('PAY')}
+					class="mt-8 py-2 text-white font-body bg-calltoAction text-center font-bold hover:bg-opacity-80 rounded-md shadow-md w-full disabled:opacity-50 disabled:pointer-events-none"
+					disabled={currentState.matches('paying') || currentState.matches('paid')}
+					>{currentState.matches('paying')
+						? 'Comprando...'
+						: currentState.matches('paid')
+						? 'Comprado :D'
+						: 'Comprar'}</button
 				>
 			</div>
+			<div id="calendar" />
 		</div>
 	</div>
 </div>

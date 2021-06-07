@@ -28,7 +28,7 @@
 
 <svelte:head><title>Nicole Apapacho - Sobre Mí</title></svelte:head>
 
-<header class="relative w-screen bg-white h-96 flex items-center justify-center">
+<header class="relative w-screen bg-white h-48 flex items-center justify-center">
 	<div class="text-center w-full md:w-2/3 xl:w-1/2 mx-auto">
 		<h4 class="font-body font-medium text-primary text-base md:text-xl uppercase text-tle">
 			Algo de historia
@@ -41,13 +41,10 @@
 		<div class="h-1 mt-4 md:mt-6 w-2/5 mx-auto border-solid border-primary border-t-2" />
 	</div>
 </header>
-<div class="container max-w-screen-md mx-auto pt-12">
+<div class="container max-w-screen-md mx-auto pt-12 px-2 md:px-0">
 	<div class="bg-bouquet-50 p-12 shadow-lg rounded-md">
-		<h1 class="text-4xl text-coffee-bean-600 text-center font-bold py-7 font-title">Sobre Mí</h1>
-		<div class="prose text-base flex flex-col justify-center content-center mx-auto">
-			<div class="font-body text-coffee-bean-600">
-				{@html PrismicDOM.RichText.asHtml(text?.[0].data.about)}
-			</div>
+		<div class="prose text-sm md:text-base font-body text-coffee-bean-600">
+			{@html PrismicDOM.RichText.asHtml(text?.[0].data.about)}
 		</div>
 	</div>
 </div>

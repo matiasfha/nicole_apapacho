@@ -7,7 +7,7 @@
 	export const tag = slug.charAt(0).toUpperCase() + slug.slice(1);
 </script>
 
-<article class="p-6 text-center md:text-left bg-bouquet-50 shadow-md rounded-md">
+<article class="p-6 text-left bg-bouquet-50 shadow-md rounded-md">
 	<a
 		class="bg-cover bg-center bg-no-repeat h-64 sm:h-80 md:h-48 lg:h-56 xl:h-64 block"
 		style={`background-image: url(${post.data.image.url});`}
@@ -21,7 +21,9 @@
 		data-href="/post"
 		href={`/blog/${post.uid}`}>{PrismicDOM.RichText.asText(post.data.title)}</a
 	>
-	<p class="font-body text-coffee-bean-600 text-sm pt-3 lg:pt-5 overflow-ellipsis overflow-hidden">
+	<p
+		class="prose md:prose-md font-body text-coffee-bean-600 text-sm pt-3 lg:pt-5 overflow-ellipsis overflow-hidden max-h-48"
+	>
 		{@html PrismicDOM.RichText.asHtml(post.data.text)}
 	</p>
 	<a

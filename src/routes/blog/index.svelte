@@ -41,7 +41,7 @@
 
 <svelte:head><title>Nicole Apapacho - Blog</title></svelte:head>
 
-<header class="relative w-screen bg-white h-96 flex items-center justify-center">
+<header class="relative w-screen bg-white h-48 flex items-center justify-center">
 	<div class="text-center w-full md:w-2/3 xl:w-1/2 mx-auto">
 		<h4 class="font-body font-medium text-primary text-base md:text-xl uppercase text-tle">
 			Mira mís últimos artículos
@@ -55,7 +55,7 @@
 	</div>
 </header>
 <section class="container pb-24 lg:pb-40 z-20 relative mx-auto px-4 md:px-0 pt-2">
-	<div class="pt-24 grid grid-cols-1 lg:grid-cols-3 gap-8 justify-center ">
+	<div class="pt-4 md:pt-24 grid grid-cols-1 lg:grid-cols-3 gap-8 justify-center ">
 		<!-- CARD-->
 		{#each posts as post}
 			<PostCard {post} />
