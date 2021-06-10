@@ -125,7 +125,9 @@
 		<div class="h-1 mt-4 md:mt-6 w-2/5 mx-auto border-solid border-primary border-t-2" />
 	</div>
 </header>
-<div class="container max-w-screen-lg mx-auto py-12 px-2 md:px-0">
+<div
+	class="container max-w-screen-lg mx-auto py-12 px-2 md:px-0 border-bouquet-50 border-2 border-solid"
+>
 	<div
 		class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8 bg-bouquet-50 p-4 rounded-md shadow-lg pb-4 md:pb-12"
 	>

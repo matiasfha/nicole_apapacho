@@ -46,7 +46,7 @@
 	</h1>
 </header>
 <div class="container max-w-screen-md mx-auto pt-12 px-2">
-	<div class=" bg-bouquet-50 p-4 shadow-md rounded-md">
+	<div class=" bg-bouquet-50 p-4 shadow-md rounded-md border-bouquet-50 border-2 border-solid">
 		<div class="prose font-body text-coffee-bean-500 mt-4 pb-8 mx-auto">
 			{@html PrismicDOM.RichText.asHtml(post.data.text)}
 		</div>

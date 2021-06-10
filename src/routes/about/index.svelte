@@ -43,7 +43,7 @@
 </header>
 <div class="container max-w-screen-md mx-auto pt-12 px-2 md:px-0">
 	<div class="bg-bouquet-50 p-12 shadow-lg rounded-md">
-		<div class="prose text-sm md:text-base font-body text-coffee-bean-600">
+		<div class="prose text-sm md:text-base font-body text-coffee-bean-800">
 			{@html PrismicDOM.RichText.asHtml(text?.[0].data.about)}
 		</div>
 	</div>

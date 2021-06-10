@@ -7,9 +7,11 @@
 	export const tag = slug.charAt(0).toUpperCase() + slug.slice(1);
 </script>
 
-<article class="p-6 text-left bg-bouquet-50 shadow-md rounded-md">
+<article
+	class="p-6 text-left bg-bouquet-50 border-boquet-50 border-solid border-2 shadow-lg rounded-md"
+>
 	<a
-		class="bg-cover bg-center bg-no-repeat h-64 sm:h-80 md:h-48 lg:h-56 xl:h-64 block"
+		class="bg-cover bg-center bg-no-repeat h-64 sm:h-80 md:h-48 lg:h-56 xl:h-64 block mt-2"
 		style={`background-image: url(${post.data.image.url});`}
 		draggable="true"
 		data-href="/post"

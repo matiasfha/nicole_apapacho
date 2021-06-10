@@ -20,7 +20,7 @@
 						</div>
 					</div>
 					<div
-						class="flex flex-row gap-6 justify-between md:block pl-4 md:pl-0 md:ml-10 md:pr-4 md:space-x-8 text-xs md:font-medium font-body"
+						class="flex flex-row gap-6 justify-between md:block pl-4 md:pl-0 md:ml-10 md:pr-4 md:space-x-8 text-xs md:text-base md:font-medium font-body"
 					>
 						<a href="/" class="text-gray-500 hover:text-gray-900">Inicio</a>
 
@@ -35,9 +35,7 @@
 		</div>
 	</div>
 </header>
-<main
-	class="w-screen h-auto  bg-test pb-24 bg-gradient-to-r from-bouquet-500 via-bouquet-50 to-bouquet-500"
->
+<main class="w-screen h-auto  bg-test pb-24 bg-gradient-to-r from-white to-bouquet-50">
 	<slot />
 </main>
 <footer class="w-screen bg-white pt-6">

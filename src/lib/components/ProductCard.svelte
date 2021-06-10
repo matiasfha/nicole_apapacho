@@ -4,7 +4,7 @@
 	export let product;
 </script>
 
-<div class="group rounded-lg shadow-md bg-white border-bouquet-50">
+<div class="group rounded-md shadow-lg bg-bouquete-50 border-bouquet-50 border-2 border-solid">
 	<span
 		class="rounded-lg transition ease-in-out duration-700 transform hover:scale-105 block shadow-xs hover:shadow-md"
 	>
