@@ -35,7 +35,9 @@
 		</div>
 	</div>
 </header>
-<main class="w-screen h-auto  bg-test pb-24 bg-gradient-to-r from-white to-bouquet-50">
+<main
+	class="w-screen h-auto  bg-test pb-24 bg-gradient-to-r from-white via-bouquet-50 to-bouquet-100"
+>
 	<slot />
 </main>
 <footer class="w-screen bg-white pt-6">

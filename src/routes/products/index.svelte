@@ -43,11 +43,11 @@
 
 <header class="relative w-screen bg-white h-48 flex items-center justify-center">
 	<div class="text-center w-full md:w-2/3 xl:w-1/2 mx-auto">
-		<h4 class="font-body font-medium text-primary text-base md:text-xl uppercase text-tle">
+		<h4 class="font-lifeSavers font-medium text-primary text-base md:text-xl uppercase text-tle">
 			Descube como te puedo ayudar
 		</h4>
 		<h2
-			class="font-body font-bold text-title text-3xl sm:text-4xl lg:text-5xl tracking-wider leading-tight text-coffee-bean-400"
+			class="font-lifeSavers font-bold text-title text-3xl sm:text-4xl lg:text-5xl tracking-wider leading-tight text-coffee-bean-600"
 		>
 			Talleres y asesorías
 		</h2>

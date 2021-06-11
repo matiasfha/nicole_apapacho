@@ -40,7 +40,7 @@
 		alt={post.data.image.alt}
 	/>
 	<h1
-		class="absolute bottom-5 font-title font-bold text-3xl md:text-4xl text-center text-coffee-bean-500"
+		class="absolute bottom-5 font-amsterdam font-bold text-3xl md:text-4xl text-center text-coffee-bean-500"
 	>
 		{PrismicDOM.RichText.asText(post.data.title)}
 	</h1>

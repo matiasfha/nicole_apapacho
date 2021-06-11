@@ -20,7 +20,9 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				'title': ['Montserrat', 'sans'],
-				'body': ['Chivo', 'sans']
+				'body': ['Chivo', 'sans'],
+				"lifeSavers": ['Life Savers', 'cursive'],
+				"amsterdam": ['Amsterdam', 'sans']
 			},
 			colors: {
 				'primary': '#A8879D',

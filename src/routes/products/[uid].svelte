@@ -118,7 +118,7 @@
 			Agenda tu taller
 		</h4>
 		<h2
-			class="font-body font-bold text-title text-3xl sm:text-4xl lg:text-5xl tracking-wider leading-tight text-coffee-bean-400"
+			class="font-amsterdam font-bold text-title text-3xl sm:text-4xl lg:text-4xl tracking-wider leading-tight text-coffee-bean-600 pt-6"
 		>
 			{PrismicDOM.RichText.asText(product.data.title)}
 		</h2>

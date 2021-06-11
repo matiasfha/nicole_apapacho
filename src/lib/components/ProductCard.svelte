@@ -14,7 +14,7 @@
 		/>
 		<span class="bg-white border-b border-bouquette-100 block px-5 lg:px-3 xl:px-5 py-8">
 			<h4
-				class="font-title font-semibold text-coffee-bean-400 group-hover:text-secondary text-lg xl:text-2xl block pb-2"
+				class="font-amsterdam font-semibold text-coffee-bean-400 group-hover:text-secondary text-lg xl:text-2xl block pb-2"
 			>
 				{PrismicDOM.RichText.asText(product.data.title)}
 			</h4>
