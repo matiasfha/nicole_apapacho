@@ -103,7 +103,6 @@
 	export let currentState;
 	const paymentService = interpret(paymentMachine)
 		.onTransition((state) => {
-			console.log(state);
 			currentState = state;
 		})
 		.start();

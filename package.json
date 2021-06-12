@@ -5,6 +5,7 @@
 		"dev": "TAILWIND_MODE=watch NODE_ENV=development svelte-kit dev",
 		"build": "TAILWIND_MODE=build NODE_ENV=production svelte-kit build",
 		"start": "svelte-kit start",
+		"preview": "svelte-kit preview",
 		"lint": "prettier --check . && eslint --ignore-path .gitignore .",
 		"format": "prettier --write ."
 	},
