@@ -40,6 +40,7 @@
 >
 	<slot />
 </main>
+
 <footer class="w-screen bg-white pt-6">
 	<div class="flex items-start justify-center mt-2 sm:mt-0">
 		<a
@@ -51,12 +52,25 @@
 
 		<a
 			href="http://www.instagram.com"
-			class="border border-calltoAction rounded-full px-1 shadow flex items-center justify-center"
+			class="border border-calltoAction rounded-full px-1 shadow flex items-center justify-center mr-3"
 		>
 			<i class="bx bxl-instagram text-calltoAction hover:text-coffee-bean-50 text-lg" />
+		</a>
+		<a
+			href="https://wa.me/56973371249"
+			class="border border-calltoAction rounded-full px-1 shadow flex items-center justify-center"
+		>
+			<i class="bx bxl-whatsapp text-calltoAction hover:text-coffee-bean-50 text-lg" />
 		</a>
 	</div>
 	<div class="bg-coffee-bean-500 h-12 w-full text-white mt-4 text-center pt-2 font-light">
 		©2020 por Nicole Apapacho.
 	</div>
 </footer>
+
+<a
+	href="https://wa.me/56973371249"
+	class="isolate fixed h-14 w-14 bottom-2 right-10 text-white bg-green-700 rounded-full shadow-md z-20 px-1 flex items-center justify-center transform transition ease-in-out duration-700 hover:scale-105 hover:shadow-lg hover:bg-green-600"
+>
+	<i class="bx bxl-whatsapp text-white text-4xl" />
+</a>

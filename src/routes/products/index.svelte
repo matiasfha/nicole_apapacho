@@ -54,8 +54,8 @@
 		<div class="h-1 mt-4 md:mt-6 w-2/5 mx-auto border-solid border-primary border-t-2" />
 	</div>
 </header>
-<section class="container pt-24 lg:pt-24 pb-24 lg:pb-40 z-20 relative mx-auto px-4 md:px-0">
-	<div class="pt-16">
+<section class="container pb-24 lg:pb-40 z-20 relative mx-auto px-4 md:px-0 pt-2">
+	<div class="pt-4 md:pt-24">
 		<!-- CARD-->
 		<div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 			{#each products as product}

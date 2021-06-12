@@ -59,7 +59,6 @@
 </script>
 
 <script>
-	import Calendly from '$lib/components/Calendly.svelte';
 	import ProductCard from '$lib/components/ProductCard.svelte';
 	import PostCard from '$lib/components/PostCard.svelte';
 	import Testimonials from '$lib/components/Testimonials.svelte';
@@ -94,14 +93,12 @@
 			</p>
 			<div class="mt-5 sm:mt-8 sm:flex justify-start">
 				<div class="rounded-md shadow">
-					<Calendly workshopName="Agenda">
-						<a
-							href="#"
-							class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-calltoAction hover:bg-coffee-bean-100 md:py-4 md:text-lg md:px-10"
-						>
-							Agenda Aquí
-						</a>
-					</Calendly>
+					<a
+						href="https://wa.me/56973371249?text=Hola Nicole. Me gustaría agendar una consultoría"
+						class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-calltoAction hover:bg-coffee-bean-100 md:py-4 md:text-lg md:px-10"
+					>
+						Agenda tu consultoría
+					</a>
 				</div>
 				<div class="mt-3 sm:mt-0 sm:ml-3">
 					<div
