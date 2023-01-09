@@ -52,7 +52,7 @@
 		"mdsvex": "0.9.8",
 		"octokit": "1.4.0",
 		"prismic-dom": "2.2.5",
-		"rrule": "2.6.8",
+		"rrule": "2.7.1",
 		"svelte-calendar": "2.0.4",
 		"xstate": "4.20.0"
 	}
